@@ -1,0 +1,175 @@
+/*
+Theme Name: Calise Cup
+Theme URI: https://calisecup.com/
+Author: Gaeta Handball 84 ASD
+Description: Tema a blocchi del torneo di beach handball Calise Cup. Aspetto caldo e familiare: mare di Serapo, oliva di Gaeta, un tocco di sole.
+Version: 0.1.0
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: calise-cup
+*/
+
+/* ---------- Caratteri inclusi nel tema (nessuna chiamata a servizi esterni) ---------- */
+@font-face{font-family:"Lora";font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/lora-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Lora";font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/lora-latin-ext-wght-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Lora";font-style:italic;font-weight:400 700;font-display:swap;src:url(assets/fonts/lora-latin-wght-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito Sans";font-style:normal;font-weight:200 1000;font-display:swap;src:url(assets/fonts/nunito-sans-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito Sans";font-style:normal;font-weight:200 1000;font-display:swap;src:url(assets/fonts/nunito-sans-latin-ext-wght-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/caveat-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/caveat-latin-ext-wght-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+:root{
+	--cc-bg:var(--wp--preset--color--sabbia);
+	--cc-surface:var(--wp--preset--color--bianco);
+	--cc-ink:var(--wp--preset--color--inchiostro);
+	--cc-muted:var(--wp--preset--color--grigio);
+	--cc-line:var(--wp--preset--color--linea);
+	--cc-sea:var(--wp--preset--color--mare);
+	--cc-sea-soft:var(--wp--preset--color--mare-chiaro);
+	--cc-olive:var(--wp--preset--color--oliva);
+	--cc-olive-soft:var(--wp--preset--color--oliva-chiaro);
+	--cc-sun:var(--wp--preset--color--sole);
+	--cc-sun-soft:var(--wp--preset--color--sole-chiaro);
+	--cc-sun-ink:#3A2C06;
+	--cc-r:16px;
+}
+
+h1,h2,h3,h4{text-wrap:balance}
+h1{letter-spacing:-.01em}
+:where(a:focus-visible,button:focus-visible,.wp-block-button__link:focus-visible){outline:3px solid var(--cc-sun);outline-offset:2px}
+.wp-site-blocks{overflow-x:clip}
+
+/* ---------- Testata ---------- */
+.cc-header{position:sticky;top:0;z-index:50;background:var(--cc-bg);border-bottom:1px solid var(--cc-line);padding-block:.75rem}
+.admin-bar .cc-header{top:var(--wp-admin--admin-bar--height,32px)}
+.cc-header > .wp-block-group{gap:1rem}
+.cc-brand{gap:.75rem;align-items:center}
+.cc-brand .wp-block-site-title a{text-decoration:none}
+.cc-brand p.cc-mark{width:44px;height:44px;border-radius:50%;border:2px solid var(--cc-sea);display:grid;place-items:center;color:var(--cc-sea);font-family:var(--wp--preset--font-family--titoli);font-weight:700;font-style:italic;font-size:1.05rem;margin:0;flex:none}
+.cc-brand:has(.wp-block-site-logo) p.cc-mark{display:none}
+.cc-header .wp-block-navigation__container{gap:.15rem}
+.cc-header .wp-block-navigation-item__content{padding:.45rem .75rem;border-radius:999px}
+.cc-header .wp-block-navigation-item__content:hover,
+.cc-header .current-menu-item > .wp-block-navigation-item__content{background:var(--cc-sea-soft);color:var(--cc-sea)}
+.cc-header-tools{gap:.75rem;align-items:center}
+@media (max-width:1080px){.cc-header .cc-cta{display:none}}
+@media (max-width:1000px){
+	.cc-header .wp-block-navigation .wp-block-navigation__responsive-container:not(.is-menu-open){display:none}
+	.cc-header .wp-block-navigation .wp-block-navigation__responsive-container-open:not(.always-shown){display:flex}
+}
+.cc-header .wp-block-navigation__responsive-container.is-menu-open{background-color:var(--cc-bg) !important;color:var(--cc-ink);padding:1.25rem !important}
+.cc-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content{padding-top:3rem;align-items:flex-start !important;justify-content:flex-start !important}
+.cc-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container{align-items:flex-start !important;justify-content:flex-start !important}
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content{font-size:1.2rem;padding:.6rem 0}
+
+/* ---------- Testi ---------- */
+.cc-hand{font-family:var(--wp--preset--font-family--a-mano);font-size:1.7rem;line-height:1.1;color:var(--cc-olive);margin-bottom:0}
+.cc-eyebrow{font-weight:700;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cc-olive);margin-bottom:0}
+.cc-eyebrow + h1,.cc-eyebrow + h2,.cc-hand + h1{margin-top:.4rem}
+.cc-lead{font-size:1.18rem;color:var(--cc-muted);max-width:40ch}
+.cc-intro{font-size:1.08rem;color:var(--cc-muted);max-width:64ch}
+.cc-muted{color:var(--cc-muted)}
+.cc-note{font-size:.92rem;color:var(--cc-muted);background:var(--cc-sun-soft);border-radius:10px;padding:.7rem 1rem;max-width:70ch}
+.cc-contact{user-select:all}
+
+/* ---------- Sezioni ---------- */
+.cc-section{margin-block:3.5rem}
+.cc-hero{padding-block:3rem 1.5rem}
+.cc-hero .wp-block-columns{gap:3rem}
+.cc-page-head{padding-block:3rem 0}
+.cc-page-head h1{font-size:var(--wp--preset--font-size--grande)}
+
+/* ---------- Pulsanti ---------- */
+.wp-block-button__link{transition:transform .15s ease}
+.wp-block-button__link:hover{transform:translateY(-1px)}
+.wp-block-button.is-style-outline > .wp-block-button__link{border:1.5px solid var(--cc-line);color:var(--cc-ink);background:transparent;padding:.7rem 1.3rem}
+.wp-block-button.is-style-sole > .wp-block-button__link{background:var(--cc-sun);color:var(--cc-sun-ink)}
+
+/* ---------- Schede ---------- */
+.cc-grid{gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(min(14rem,100%),1fr)) !important}
+.cc-grid.is-tight{grid-template-columns:repeat(auto-fit,minmax(min(10.5rem,100%),1fr)) !important}
+.cc-card{background:var(--cc-surface);border:1px solid var(--cc-line);border-radius:var(--cc-r);padding:1.4rem;box-sizing:border-box}
+.cc-grid > .cc-card{height:100%}
+.cc-card > *{margin-block:0}
+.cc-card > * + *{margin-top:.6rem}
+.cc-card.is-warm{background:var(--cc-sun-soft);border-color:transparent}
+.cc-card.is-olive{background:var(--cc-olive-soft);border-color:transparent}
+.cc-who{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--cc-olive)}
+.cc-go a{font-weight:700;text-decoration:none}
+.cc-go a::after{content:" →"}
+.cc-card ul{padding-left:1.1rem}
+
+.wp-block-column > .cc-card + .cc-card,.wp-block-column > .cc-card + .cc-grid,.wp-block-column > .cc-grid + .cc-card{margin-top:1.1rem}
+
+/* Foto a "polaroid" */
+.wp-block-image.cc-polaroid{background:var(--cc-surface);padding:14px 14px 10px;border-radius:6px;box-shadow:0 10px 30px rgba(36,50,59,.12);transform:rotate(1.6deg);max-width:440px;margin-inline:auto}
+.wp-block-image.cc-polaroid img{border-radius:3px;display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.wp-block-image.cc-polaroid figcaption{font-family:var(--wp--preset--font-family--a-mano);font-size:1.5rem;color:var(--cc-olive);text-align:center;margin:.5rem 0 0}
+
+/* Il ricordo di Francesco */
+.cc-memory{background:var(--cc-olive-soft);border-radius:var(--cc-r);padding:2.2rem}
+.cc-memory p{max-width:66ch}
+
+/* Numeri */
+.cc-facts{gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(9.5rem,100%),1fr)) !important}
+.cc-fact{border-top:2px solid var(--cc-line);padding-top:.5rem}
+.cc-fact > *{margin:0}
+.cc-fact .cc-num{font-family:var(--wp--preset--font-family--titoli);font-size:2rem;font-weight:700;color:var(--cc-sea);line-height:1.2;font-variant-numeric:tabular-nums}
+.cc-fact .cc-num + p{font-size:.92rem;color:var(--cc-muted)}
+
+/* Passi numerati */
+.cc-steps{counter-reset:cc-step;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(min(13rem,100%),1fr)) !important}
+.cc-step{counter-increment:cc-step}
+.cc-step > *{margin:0}
+.cc-step > * + *{margin-top:.3rem}
+.cc-step::before{content:counter(cc-step);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--cc-sun);color:var(--cc-sun-ink);font-weight:700;margin-bottom:.6rem}
+
+/* Storia */
+.cc-timeline{border-left:2px dotted var(--cc-olive);margin-left:.5rem;padding-left:0}
+.cc-timeline .cc-year{position:relative;padding:0 0 1.2rem 1.4rem}
+.cc-timeline .cc-year > *{margin:0}
+.cc-timeline .cc-year::before{content:"";position:absolute;left:-7px;top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--cc-olive)}
+.cc-timeline .cc-year h3{color:var(--cc-olive)}
+
+/* Persone */
+.cc-person{text-align:center}
+.cc-person > *{margin:0}
+.cc-person .cc-face{width:96px;height:96px;border-radius:50%;background:var(--cc-sea-soft);display:grid;place-items:center;font-family:var(--wp--preset--font-family--titoli);font-size:1.6rem;color:var(--cc-sea);margin:0 auto .5rem;box-shadow:0 0 0 1px var(--cc-line)}
+.cc-person .wp-block-image img{width:96px;height:96px;border-radius:50%;object-fit:cover}
+
+/* Loghi dei partner */
+.cc-logos{gap:.75rem;grid-template-columns:repeat(auto-fit,minmax(min(8rem,100%),1fr)) !important}
+.cc-logo{aspect-ratio:3/2;border:1.5px dashed var(--cc-line);border-radius:12px;display:grid;place-items:center;text-align:center;font-size:.82rem;color:var(--cc-muted);padding:.4rem;background:var(--cc-surface);margin:0}
+
+/* Tabelle */
+.wp-block-table{background:var(--cc-surface);border:1px solid var(--cc-line);border-radius:var(--cc-r);overflow-x:auto}
+.wp-block-table table{border-collapse:collapse;font-size:.96rem}
+.wp-block-table td,.wp-block-table th{border:0;border-bottom:1px solid var(--cc-line);padding:.7rem .9rem;text-align:left;vertical-align:top}
+.wp-block-table thead{border-bottom:0}
+.wp-block-table th{font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--cc-muted)}
+.wp-block-table tr:last-child td{border-bottom:0}
+.cc-pill{display:inline-block;font-size:.78rem;font-weight:700;padding:.1rem .6rem;border-radius:999px;background:var(--cc-sun-soft);color:var(--cc-sun-ink)}
+
+/* Notizie */
+.cc-posts .wp-block-post{background:var(--cc-surface);border:1px solid var(--cc-line);border-radius:var(--cc-r);padding:1.4rem}
+.cc-posts .wp-block-post > *{margin-block:0}
+.cc-posts .wp-block-post > * + *{margin-top:.5rem}
+.cc-posts .wp-block-post-template{gap:1.1rem}
+.cc-posts .wp-block-post-title{font-size:1.35rem}
+.cc-posts .wp-block-post-title a{text-decoration:none;color:var(--cc-ink)}
+.cc-posts .wp-block-post-date{font-size:.85rem;color:var(--cc-muted)}
+.cc-article{max-width:720px;margin-inline:auto}
+
+/* ---------- Piè di pagina ---------- */
+.cc-footer{background:var(--cc-surface);border-top:1px solid var(--cc-line);padding-block:2.75rem;margin-top:4.5rem}
+.cc-footer p{margin-block:.2rem}
+
+@media (max-width:781px){
+	.cc-hero{padding-block:2rem 1rem}
+	.cc-memory{padding:1.5rem}
+	.wp-block-image.cc-polaroid{transform:rotate(1deg)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}

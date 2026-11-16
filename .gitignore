@@ -1,0 +1,17 @@
+# Sistema e editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Dipendenze e file generati
+node_modules/
+vendor/
+dist/
+*.zip
+*.log
+
+# WordPress locale di prova
+/wp/
+*.sqlite

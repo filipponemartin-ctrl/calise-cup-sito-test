@@ -7,6 +7,7 @@
  */
 
 calise_cup_p( 'Tutto quello che c\'è da sapere sulla Calise Cup. Le informazioni vengono dal regolamento 2026: appena fissate, le date 2027 compariranno qui.', 'cc-intro' );
+calise_cup_banner( 'volo-slovacchia.jpg', 'Una giocatrice tira in volo davanti alla difesa, a bordo campo gli striscioni del torneo' );
 ?>
 <!-- wp:columns {"className":"cc-section"} -->
 <div class="wp-block-columns cc-section"><!-- wp:column -->
@@ -44,12 +45,24 @@ calise_cup_table(
 <?php
 calise_cup_open( 'cc-section' );
 calise_cup_h( 'Come si gioca' );
-calise_cup_open( 'cc-grid', 'grid', array( 'min' => '14rem' ) );
+?>
+<!-- wp:columns {"verticalAlignment":"center"} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"64%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:64%"><?php
+calise_cup_open( 'cc-grid', 'grid', array( 'min' => '13rem' ) );
 calise_cup_card( 'La formula', '', 'Prima i gironi, poi l\'eliminazione diretta. Tutte le squadre giocano fino all\'ultimo piazzamento.' );
 calise_cup_card( 'La partita', '', 'Due tempi da 10 minuti, 7 per le giovanili. Ogni tempo si vince a sé.' );
 calise_cup_card( 'In parità', '', 'Tempo pari: golden goal. Un tempo per parte: shootout contro il portiere.' );
 calise_cup_card( 'Fair play', '', 'Nel beach handball conta prima di tutto. Si gioca con qualsiasi tempo.' );
 calise_cup_close();
+?></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><?php calise_cup_img( 'arbitro.jpg', 'Un arbitro internazionale con la divisa EHF fischia a bordo campo', 'cc-polaroid is-tall', 'Arbitri da tutta Europa' ); ?></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+<?php
 calise_cup_p( 'Il regolamento completo sarà pubblicato qui, in italiano e in inglese, con il PDF da scaricare.', 'cc-note' );
 calise_cup_close();
 
@@ -81,7 +94,7 @@ $storia = array(
 	'2017' => 'La prima edizione con il nome Calise Cup.',
 );
 foreach ( $storia as $anno => $fatto ) {
-	calise_cup_open( 'cc-year' );
+	calise_cup_open( 'cc-year-item' );
 	calise_cup_h( esc_html( $anno ), 3 );
 	calise_cup_p( esc_html( $fatto ) );
 	calise_cup_close();
@@ -92,6 +105,7 @@ calise_cup_close();
 
 <!-- wp:column -->
 <div class="wp-block-column"><?php
+calise_cup_img( 'podio-italia.jpg', 'La squadra vincitrice con la coppa dietro il pannello Calise Cup Winners', 'cc-polaroid is-tall', 'I vincitori 2026' );
 calise_cup_open( 'cc-card is-warm' );
 calise_cup_p( 'Albo d\'oro', 'cc-who' );
 calise_cup_h( 'Chi ha vinto, anno per anno', 3 );

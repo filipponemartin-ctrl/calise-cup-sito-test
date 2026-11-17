@@ -7,6 +7,7 @@
  */
 
 calise_cup_p( 'Il torneo vive grazie a chi ci crede: dalle grandi aziende al bar sulla spiaggia. Sostenerlo significa farsi conoscere da squadre e famiglie che arrivano a Gaeta da tutto il mondo.', 'cc-intro' );
+calise_cup_banner( 'attacco-cerbone.jpg', 'Un tiro in volo, sullo sfondo gli striscioni dei partner a bordo campo', 'I vostri striscioni, dentro ogni azione' );
 
 calise_cup_open( 'cc-facts cc-section', 'grid', array( 'min' => '11rem' ) );
 calise_cup_fact( '900+', 'atleti nell\'edizione 2026' );
@@ -30,7 +31,8 @@ calise_cup_close();
 <!-- wp:columns {"className":"cc-section"} -->
 <div class="wp-block-columns cc-section"><!-- wp:column -->
 <div class="wp-block-column"><?php
-calise_cup_open( 'cc-card is-olive' );
+calise_cup_img( 'borraccia.jpg', 'Una giocatrice beve dalla borraccia durante la pausa', 'cc-polaroid is-left', 'Un marchio in mano ai giocatori' );
+calise_cup_open( 'cc-card is-sea' );
 calise_cup_p( 'Per le aziende', 'cc-who' );
 calise_cup_h( 'Costruiamo insieme il vostro pacchetto', 3 );
 calise_cup_p( 'Il nome di un campo o di un trofeo, le dirette, la serata sul main stage, il convegno, il settore giovanile, la borraccia plastic-free: scegliamo insieme lo spazio più adatto a voi.' );

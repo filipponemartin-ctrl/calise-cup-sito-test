@@ -14,11 +14,23 @@ calise_cup_close();
 
 calise_cup_open( 'cc-section' );
 calise_cup_h( 'Come funzionerà' );
-calise_cup_open( 'cc-grid', 'grid', array( 'min' => '14rem' ) );
+?>
+<!-- wp:columns {"verticalAlignment":"center"} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"62%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:62%"><?php
+calise_cup_open( 'cc-grid', 'grid', array( 'min' => '12rem' ) );
 calise_cup_card( 'Per gli atleti', 'Le partite della vostra squadra', 'Cercate la squadra e trovate giorno, ora e campo. Potrete salvarle nel calendario del telefono.' );
 calise_cup_card( 'Per il pubblico', 'Tutto il programma', 'Filtri per giorno, campo e categoria, per sapere sempre cosa si gioca e dove.' );
 calise_cup_card( 'In diretta', 'Risultati dal campo', 'Punteggio di ogni tempo, classifiche dei gironi e tabellone finale, aggiornati partita dopo partita.' );
 calise_cup_close();
+?></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><?php calise_cup_img( 'tiro-tabellone.jpg', 'Un tiro in sospensione, sullo sfondo il tabellone con il punteggio 14 a 16', 'cc-polaroid is-tall', '14 a 16, si decide tutto qui' ); ?></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+<?php
 calise_cup_close();
 
 calise_cup_open( 'cc-section' );

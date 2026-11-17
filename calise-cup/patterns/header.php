@@ -8,19 +8,9 @@
 ?>
 <!-- wp:group {"className":"cc-header","layout":{"type":"constrained"}} -->
 <div class="wp-block-group cc-header"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-<div class="wp-block-group"><!-- wp:group {"className":"cc-brand","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group cc-brand"><!-- wp:site-logo {"width":44} /-->
-
-<!-- wp:paragraph {"className":"cc-mark"} -->
-<p class="cc-mark">CC</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:group {"style":{"spacing":{"blockGap":"2px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group"><!-- wp:site-title {"level":0} /-->
-
-<!-- wp:site-tagline /--></div>
-<!-- /wp:group --></div>
-<!-- /wp:group -->
+<div class="wp-block-group"><!-- wp:image {"sizeSlug":"full","linkDestination":"custom","className":"cc-brand"} -->
+<figure class="wp-block-image size-full cc-brand"><a href="<?php echo calise_cup_url(); ?>"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/logo-calise-cup-blu.png' ) ); ?>" alt="Calise Cup, European Beach Handball Tournament: torna alla home"/></a></figure>
+<!-- /wp:image -->
 
 <!-- wp:group {"className":"cc-header-tools","layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group cc-header-tools"><!-- wp:navigation {"overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"right"}} /-->

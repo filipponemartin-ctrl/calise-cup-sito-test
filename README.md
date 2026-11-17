@@ -22,7 +22,7 @@ Il link avvia [WordPress Playground](https://wordpress.org/playground/): un Word
 | --- | --- |
 | Grafica: colori, caratteri, testata, menu per telefono, piè di pagina | Fatto (v0.1.0) |
 | Pagine in italiano: Home, Il torneo, Partecipa, Calendario e risultati, Vivi Gaeta, Amici e partner, Foto e notizie | Fatto (v0.1.0) |
-| Foto e logo definitivi | Da inserire |
+| Foto del torneo, logo e colori del logo | Fatto (v0.2.0) |
 | Versione inglese | Da fare |
 | Account, squadre, iscrizioni e pagamenti (plugin su misura) | Da fare |
 | Calendario, risultati, documenti, sponsor, convenzioni | Da fare |

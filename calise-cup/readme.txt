@@ -20,5 +20,8 @@ Tema a blocchi del torneo di beach handball Calise Cup (Gaeta Handball 84 ASD).
 * I testi delle pagine sono blocchi standard: si modificano dall'editor di WordPress.
 
 == Changelog ==
+= 0.2.0 =
+* Colori dei loghi, foto del torneo, apertura a tutta larghezza, mosaico e piè di pagina blu notte.
+
 = 0.1.0 =
 * Prima versione: grafica, testata, piè di pagina, pagine pubbliche in italiano.

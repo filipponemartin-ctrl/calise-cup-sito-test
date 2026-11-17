@@ -7,6 +7,7 @@
  */
 
 calise_cup_p( 'Ci occupiamo noi di semplificarvi il viaggio. Se avete un dubbio, scriveteci: rispondiamo in italiano e in inglese.', 'cc-intro' );
+calise_cup_banner( 'cinque-alte.jpg', 'Giocatrici di due squadre si danno il cinque a fine partita, sullo sfondo le bandiere delle nazioni', 'A fine partita ci si saluta tutti' );
 
 calise_cup_open( 'cc-steps cc-section', 'grid', array( 'min' => '13rem' ) );
 $passi = array(
@@ -26,7 +27,7 @@ calise_cup_close();
 <!-- wp:columns {"className":"cc-section"} -->
 <div class="wp-block-columns cc-section"><!-- wp:column -->
 <div class="wp-block-column"><?php
-calise_cup_open( 'cc-card is-olive' );
+calise_cup_open( 'cc-card is-sea' );
 calise_cup_p( 'Pre-iscrizione 2027', 'cc-who' );
 calise_cup_h( 'Scriveteci per prenotare il posto', 3 );
 calise_cup_p( 'Il modulo online arriva con l\'apertura delle iscrizioni. Nel frattempo mandateci un\'email con:' );

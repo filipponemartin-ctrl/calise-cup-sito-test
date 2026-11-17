@@ -1,0 +1,32 @@
+name: Chiedi una modifica
+description: Un testo da cambiare, una pagina o una funzione nuova
+labels: [richiesta]
+body:
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo di richiesta
+      options:
+        - Testo o immagine da cambiare
+        - Pagina nuova
+        - Funzione nuova
+    validations:
+      required: true
+  - type: textarea
+    id: cosa
+    attributes:
+      label: Cosa serve
+      description: Descrivete la modifica e per chi è utile (squadre, pubblico, sponsor, staff).
+    validations:
+      required: true
+  - type: input
+    id: requisito
+    attributes:
+      label: Requisito collegato
+      description: Codice del documento dei requisiti, se esiste
+      placeholder: RF-SPO-12
+  - type: input
+    id: scadenza
+    attributes:
+      label: Entro quando
+      placeholder: Prima dell'apertura delle iscrizioni

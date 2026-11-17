@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustrazione: la spiaggia di Serapo con una porta da beach handball">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CFE6EE"/><stop offset="1" stop-color="#F6EBD6"/></linearGradient><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3F8FA8"/><stop offset="1" stop-color="#7FC1CF"/></linearGradient></defs>
+<rect width="800" height="270" fill="url(#sky)"/>
+<circle cx="624" cy="120" r="48" fill="#F2C766"/>
+<path d="M0 252 L144 180 L272 252 Z" fill="#5B8F9C"/>
+<rect y="252" width="800" height="124" fill="url(#sea)"/>
+<g fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2.5"><path d="M0 280 q50 -8 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0"/><path d="M0 306 q50 8 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0"/><path d="M0 332 q50 -8 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0"/></g>
+<path d="M0 372 q100 -14 200 0 t200 0 t200 0 t200 0 V600 H0 Z" fill="#EED9B0"/>
+<g fill="#96733C" fill-opacity=".35"><circle cx="90" cy="430" r="2"/><circle cx="210" cy="500" r="2"/><circle cx="330" cy="560" r="2"/><circle cx="470" cy="540" r="2"/><circle cx="610" cy="470" r="2"/><circle cx="720" cy="560" r="2"/><circle cx="150" cy="570" r="2"/><circle cx="560" cy="580" r="2"/><circle cx="690" cy="420" r="2"/><circle cx="40" cy="520" r="2"/></g>
+<g stroke="#4A3F33" stroke-width="5" stroke-linecap="round"><path d="M250 530 V380"/><path d="M550 530 V380"/><path d="M250 380 H550"/></g>
+<g stroke="#4A3F33" stroke-opacity=".45" stroke-width="1.5"><path d="M250 400H550M250 420H550M250 440H550M250 460H550M250 480H550M250 500H550"/><path d="M280 380V525M310 380V525M340 380V525M370 380V525M400 380V525M430 380V525M460 380V525M490 380V525M520 380V525"/></g>
+<circle cx="640" cy="520" r="20" fill="#F1C35B" stroke="#1E6A85" stroke-width="4"/>
+</svg>

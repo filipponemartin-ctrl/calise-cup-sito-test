@@ -1,0 +1,53 @@
+name: Pubblica versione
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Pubblica ${{ github.ref_name }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: L'etichetta corrisponde alla versione del tema
+        run: |
+          version="$(sed -n 's/^Version:[[:space:]]*//p' calise-cup/style.css | tr -d '\r')"
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "L'etichetta $GITHUB_REF_NAME non corrisponde alla versione $version di style.css" >&2
+            exit 1
+          fi
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+
+      - name: Controlli del tema
+        run: bin/check.sh
+
+      - name: Crea il file zip
+        run: bin/build-zip.sh
+
+      - name: Note della versione dal changelog
+        run: |
+          awk -v v="$VERSION" '
+            $0 ~ "^## \\[" v "\\]" { found = 1; next }
+            found && /^## \[/ { exit }
+            found && /^\[.*\]: / { exit }
+            found { print }
+          ' CHANGELOG.md > note.md
+          test -s note.md
+
+      - name: Pubblica su GitHub
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/*.zip \
+            --title "Calise Cup $VERSION" \
+            --notes-file note.md

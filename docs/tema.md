@@ -30,13 +30,20 @@ Per aggiungere una pagina di partenza:
 
 | Nome | Codice | Uso |
 | --- | --- | --- |
-| Sabbia chiara | `#FBF9F5` | Sfondo |
-| Inchiostro | `#24323B` | Testo |
-| Grigio | `#5D6B72` | Testo secondario |
-| Mare di Serapo | `#1E6A85` | Link e pulsanti |
-| Oliva di Gaeta | `#5C7330` | Etichette, scritte a mano, storia |
-| Sole | `#F1C35B` | Accenti, numeri dei passi |
-| Mare chiaro, Oliva chiaro, Sole chiaro | — | Sfondi delle schede |
+| Sabbia | `#FFF8EC` | Sfondo |
+| Sabbia scura | `#F4E4C4` | Bordi caldi, fasce |
+| Inchiostro | `#13213F` | Testo |
+| Grigio | `#4E5B73` | Testo secondario |
+| Blu Calise | `#1F4BC8` | Link, pulsanti, fascia delle nazioni (dal logo) |
+| Azzurro | `#0CB8F2` | Linee e dettagli (dal logo) |
+| Rosso | `#E2262D` | Pulsante "Iscrivi la squadra", anni, etichette (dal logo) |
+| Sole | `#FFC53D` | Pulsante in apertura, accenti |
+| Notte | `#0D1D4A` | Fascia dei numeri, piè di pagina |
+| Azzurro chiaro, Sole chiaro | — | Sfondi delle schede |
+
+## Foto
+
+Le foto stanno in `calise-cup/assets/img/foto/`, larghe al massimo 1800 px, in JPEG di qualità 80, senza la firma in basso (il credito è nel piè di pagina). Non si usano foto in cui i protagonisti sono minori senza il consenso dei genitori.
 
 ## Caratteri
 

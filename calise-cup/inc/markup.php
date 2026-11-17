@@ -153,3 +153,51 @@ function calise_cup_fact( $number, $label ) {
 	calise_cup_p( esc_html( $label ) );
 	calise_cup_close();
 }
+
+/**
+ * Foto del tema (cartella assets/img/foto). $align: '', 'wide' o 'full'.
+ */
+function calise_cup_img( $file, $alt, $class = '', $caption = '', $align = '' ) {
+	$attrs = array(
+		'sizeSlug'        => 'full',
+		'linkDestination' => 'none',
+	);
+	if ( $align ) {
+		$attrs['align'] = $align;
+	}
+	if ( $class ) {
+		$attrs['className'] = $class;
+	}
+	$classes = trim( 'wp-block-image ' . ( $align ? 'align' . $align . ' ' : '' ) . 'size-full ' . $class );
+	$src     = get_theme_file_uri( 'assets/img/foto/' . $file );
+	printf(
+		"<!-- wp:image%s -->\n<figure class=\"%s\"><img src=\"%s\" alt=\"%s\"/>%s</figure>\n<!-- /wp:image -->\n\n",
+		calise_cup_attrs( $attrs ),
+		esc_attr( $classes ),
+		esc_url( $src ),
+		esc_attr( $alt ),
+		$caption ? '<figcaption class="wp-element-caption">' . wp_kses_post( $caption ) . '</figcaption>' : ''
+	);
+}
+
+/**
+ * Scheda con foto in alto.
+ */
+function calise_cup_photo_card( $file, $alt, $who, $title, $text, $link_label, $url ) {
+	calise_cup_open( 'cc-card cc-photo-card' );
+	calise_cup_img( $file, $alt, 'cc-card-img' );
+	calise_cup_open( 'cc-card-body' );
+	calise_cup_p( esc_html( $who ), 'cc-who' );
+	calise_cup_h( esc_html( $title ), 3 );
+	calise_cup_p( $text, 'cc-muted' );
+	calise_cup_p( sprintf( '<a href="%s">%s</a>', esc_url( $url ), esc_html( $link_label ) ), 'cc-go' );
+	calise_cup_close();
+	calise_cup_close();
+}
+
+/**
+ * Fascia fotografica a tutta larghezza in testa alle pagine interne.
+ */
+function calise_cup_banner( $file, $alt, $caption = '' ) {
+	calise_cup_img( $file, $alt, 'cc-banner', $caption, 'wide' );
+}

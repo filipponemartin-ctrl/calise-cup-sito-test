@@ -7,6 +7,7 @@
  */
 
 calise_cup_p( 'Si gioca sulla spiaggia, tra un ombrellone e l\'altro. Portate i bambini, il cappello e la voglia di fare il tifo. Il programma è indicativo: quello 2027 arriverà in primavera.', 'cc-intro' );
+calise_cup_banner( 'italia-mare.jpg', 'Giocatori in fila sulla sabbia, alle spalle gli ombrelloni e il mare di Serapo', 'Il mare a due passi dai campi' );
 
 calise_cup_open( 'cc-grid cc-section', 'grid', array( 'min' => '15rem' ) );
 calise_cup_card( 'Venerdì', 'Si comincia', 'Accoglienza delle squadre e prime partite dei gironi nel pomeriggio.' );
@@ -43,3 +44,11 @@ calise_cup_close();
 ?></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
+<?php
+calise_cup_open( 'cc-section' );
+calise_cup_open( 'cc-grid', 'grid', array( 'min' => '16rem' ) );
+calise_cup_img( 'tribuna-tramonto.jpg', 'Giocatrici sorridenti sedute in tribuna al tramonto', 'cc-polaroid is-tall is-left', 'In tribuna, al tramonto' );
+calise_cup_img( 'australia-tiro.jpg', 'Un giocatore australiano tira in volo, alle spalle le colline di Gaeta', 'cc-polaroid is-tall', 'Le colline di Gaeta alle spalle' );
+calise_cup_img( 'palla-contesa.jpg', 'Due giocatori saltano per la palla davanti alle case sul lungomare', 'cc-polaroid is-tall is-left', 'Si gioca sotto le case' );
+calise_cup_close();
+calise_cup_close();

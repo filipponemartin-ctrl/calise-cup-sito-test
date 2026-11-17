@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CALISE_CUP_VERSION', '0.1.0' );
+define( 'CALISE_CUP_VERSION', '0.2.0' );
 
 require get_theme_file_path( 'inc/markup.php' );
 require get_theme_file_path( 'inc/setup.php' );

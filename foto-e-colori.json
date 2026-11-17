@@ -1,0 +1,40 @@
+{
+  "landingPage": "/",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "steps": [
+    {
+      "step": "setSiteLanguage",
+      "language": "it_IT"
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Calise Cup",
+        "blogdescription": "Beach handball a Gaeta",
+        "permalink_structure": "/%postname%/",
+        "timezone_string": "Europe/Rome"
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "git:directory",
+        "url": "https://github.com/filipponemartin-ctrl/calise-cup-sito-test",
+        "ref": "feat/foto-e-colori",
+        "refType": "branch",
+        "path": "calise-cup"
+      },
+      "options": {
+        "activate": true,
+        "targetFolderName": "calise-cup"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php'; if ( function_exists( 'calise_cup_run_setup' ) && ! get_option( 'calise_cup_setup_done' ) ) { calise_cup_run_setup(); } $hello = get_page_by_path( 'hello-world', OBJECT, 'post' ); if ( $hello ) { wp_delete_post( $hello->ID, true ); } if ( ! get_posts( array( 'post_type' => 'post', 'numberposts' => 1 ) ) ) { wp_insert_post( array( 'post_type' => 'post', 'post_status' => 'publish', 'post_title' => 'Benvenuti nel nuovo sito della Calise Cup', 'post_content' => '<!-- wp:paragraph --><p>Stiamo costruendo il nuovo sito del torneo: un posto solo per squadre, atleti, famiglie e amici della Calise Cup.</p><!-- /wp:paragraph -->' ) ); } flush_rewrite_rules();"
+    }
+  ]
+}
